@@ -27,3 +27,8 @@ Route::post('/edit/{token}/{editToken}', 'App\Http\Controllers\TokenController@u
 Route::get('/show/{token}', 'App\Http\Controllers\TokenController@show');
 Route::get('/editimage/{token}/{editToken}', 'App\Http\Controllers\TokenController@editimage');
 Route::post('/image/{token}/{editToken}', 'App\Http\Controllers\TokenController@updateimage');
+Route::post('/show', 'App\Http\Controllers\TokenController@showintro');
+
+
+Route::get('/delete/{id}', 'App\Http\Controllers\TokenController@delete');
+Route::get('/deleteimage/{token}/{editToken}/{id}', 'App\Http\Controllers\TokenController@deleteimage');

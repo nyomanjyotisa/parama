@@ -71,15 +71,13 @@
 			        <div class="row gx-5 align-items-center">
 			            <div class="col-lg-6 left__side">
 			                <div class="content space-y-20">
-			                    <h1 class="hero__title">Enter your token to open the main page!</h1>
-			                    <p class="hero__desc"><span style="color:red">Caution! A token only can be submitted once.</span> Please use your token wisely, and don't refresh your browser when you in the main page. If you have any problem please <a href="https://line.me/ti/p/~manjyo11">contact me</a>.
+			                    <h1 class="hero__title">Enter your token from the candle!</h1>
+			                    <p class="hero__desc">Some text blablabla
 			                    </p>
-			                    <p class="hero__desc">If you are not directed to the main page after submitting, that's mean your token has been used.
-			                    </p>
-								<form action="index.php" method="post" role="form">
-									<input placeholder="Enter your token" type="text" name="tokenvalue"
-										class="form-control">
-									<input type="submit" class="btn btn-grad mt-3" name="token" value="Use Token">
+								<form action="/show" method="post">
+								@csrf
+									<input placeholder="Enter your token" type="text" name="token" class="form-control">
+									<input type="submit" class="btn btn-grad mt-3" name="submit" value="Submit Token">
 								</form>
 			                </div>
 			            </div>

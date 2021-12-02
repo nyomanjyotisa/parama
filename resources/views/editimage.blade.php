@@ -71,7 +71,8 @@
 			        <div class="row gx-5 align-items-center">
 			            <div class="col-lg-12 left__side">
 			                <div class="content space-y-20">
-                            <a href="https://drive.google.com/drive/folders/1YGz-zavdlyCmpNQbJgY1JySmcPtkIZo6" class="btn btn-primary float-right">Finish</a>
+								<h2>Add Image (3 Images Recommended or multiples thereof)</h2>
+                            <a href="/show/{{$token}}" class="btn btn-primary float-right">Finish</a>
                             <a href="#myModal" class="trigger-btn btn btn-success" data-toggle="modal">Add Image</a>
                             
 							<div class="row">
@@ -88,6 +89,11 @@
 			        				<h5 class="collection_title">{{$image->title}}</h5>
 			        			</div>
                                 <p>{{$image->description}}</p>
+								<a href="/deleteimage/{{$tokenNew->token}}/{{$edit_token}}/{{$image->id}}">
+									<button type="button" class="btn btn-danger center"  onclick="return confirm ('Hapus Image?')">
+										Delete
+									</button>
+								</a>
 			        		</div>
 			        	</div>
                         @endforeach

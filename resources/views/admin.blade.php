@@ -110,8 +110,8 @@
                                 Edit
                             </button>
                         </a>
-                        <a>
-                            <button type="button" class="btn btn-danger">
+                        <a href="/delete/{{$token->id}}">
+                            <button type="button" class="btn btn-danger"  onclick="return confirm ('Hapus Customer?')">
                                 Delete
                             </button>
                         </a>

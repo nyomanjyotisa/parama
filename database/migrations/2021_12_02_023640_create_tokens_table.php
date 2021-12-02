@@ -23,6 +23,8 @@ class CreateTokensTable extends Migration
             $table->text('description')->nullable();
             $table->string('video')->nullable();
             $table->string('drive')->nullable();
+            $table->string('qr')->nullable();
+            $table->string('qr_edit')->nullable();
             $table->timestamps();
         });
     }

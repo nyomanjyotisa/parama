@@ -75,24 +75,22 @@
                             <form action="/edit/{{$token->token}}/{{$token->edit_token}}" method="post" enctype="multipart/form-data">
                         @csrf
                         
-                        <button type="button" class="btn btn-primary mb-5">
-                                Show Template
-                            </button>
+                        <a href="/template/1" class="btn btn-primary mb-5">Show Template</a>
                         <div class="form-group">
                             <h6 class="mb-2">Page Header</h6>
-                            <input type="text" class="form-control" placeholder="Type Text Header" required="required" name="title">
+                            <input type="text" class="form-control" placeholder="Type Text Header" required="required" name="title" value="{{ $token->title }}">
                         </div>
                         <div class="form-group">
                             <h6 class="mb-2">Page Description</h6>
-                            <input type="text" class="form-control" placeholder="Type Text Description" required="required" name="description">					
+                            <input type="text" class="form-control" placeholder="Type Text Description" required="required" name="description" value="{{ $token->description }}">					
                         </div>
                         <div class="form-group">
                             <h6 class="mb-2">Google Drive Link</h6>
-                            <input type="text" class="form-control" placeholder="Google Drive Link" name="drive">					
+                            <input type="text" class="form-control" placeholder="Google Drive Link" name="drive" value="{{ $token->drive }}">					
                         </div>
                         <div class="form-group">
                             <h6 class="mb-2">Upload Video</h6>
-                            <input type="file" id="video" name="file" accept="video/*">					
+                            <input type="file" id="video" name="file" accept="video/*" value="{{ $token->video }}">					
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btn btn-primary btn-block btn-lg" value="Next">
